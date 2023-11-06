@@ -1,0 +1,96 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+h1 {
+    position: absolute;
+    top: -45px;
+    font-size: 5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffdeff;
+    background: linear-gradient(to right, rgb(131, 212, 245), rgb(255, 122, 189));
+}
+
+.card-row {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card h2
+{
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    display: none;
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    right: 250px;
+    color: white;
+    transition: all 0.3s;
+}
+.card p{
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    display: none; 
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    right: 140px;
+    color: white;
+    transition: all 0.3s;
+}
+
+
+.card:hover h2,
+.card:hover p {
+    display: block; /* Display h2 and p on hover */
+}
+
+.card:hover {
+    animation: choose 2s ease-in-out forwards;
+}
+
+.card-row > .card {
+    flex: 1;
+}
+
+@keyframes choose {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+        margin: 50px;
+    }
+}
